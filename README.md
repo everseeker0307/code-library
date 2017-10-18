@@ -6,4 +6,6 @@ druid多数据源配置 + jdbctemplate调用。
 
 ## https  
 实现同时支持http以及https，或者http请求跳转为https。  
-[https原理](src/blog/https原理.md)
+[https原理](src/blog/https原理.md)  
+[springboot支持https](src/blog/springboot支持https.md)  
+
