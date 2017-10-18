@@ -1,0 +1,29 @@
+server:
+  port: 8443
+  ssl:
+    key-store: src/main/resources/tomcat_keystore.pfx
+    key-store-password: 123456
+    key-password: 123456
+    key-store-type: JKS
+    key-alias: tomcat
+    client-auth: want   # client-auth这个参数用来确定是否需要强制双向认证，want：提示；need：必须(即设置为need就不支持单项认证了)
+
+spring:
+  datasource:
+    postgresql:
+    # druid配置, me.wuhao.multi_datasource
+      hvr:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://10.197.0.69:5432/hvr
+        username: gpadmin
+        password: gpadmin
+        maxActive: 10
+        initialSize: 1
+        minIdle: 2
+        maxWait: 1000   # 获取连接最大等待时间, 单位毫秒
+      wuhao:
+        driver-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://10.197.0.69:5432/wuhao
+        username: gpadmin
+        password: gpadmin
+

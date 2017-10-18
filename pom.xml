@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>me.wuhao</groupId>
+	<artifactId>code-library</artifactId>
+	<version>0.1.1</version>
+	<packaging>jar</packaging>
+
+	<name>code-library</name>
+	<description>my code library</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<!--spring boot相关包-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<!--postgresql-->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--数据源-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<!--json转换-->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.1</version>
+		</dependency>
+
+		<!--kettle相关jar包，通过以下命令安装到本地仓库-->
+		<!--mvn install:install-file -Dfile=src/main/lib/kettle/kettle-core-6.1.0.1-196.jar -DgroupId=com.pentaho -DartifactId=kettle-core -Dversion=6.1.0.1 -Dpackaging=jar-->
+		<!--mvn install:install-file -Dfile=src/main/lib/kettle/kettle-engine-6.1.0.1-196.jar -DgroupId=com.pentaho -DartifactId=kettle-engine -Dversion=6.1.0.1 -Dpackaging=jar-->
+		<!--mvn install:install-file -Dfile=src/main/lib/kettle/metastore-6.1.0.1-196.jar -DgroupId=com.pentaho -DartifactId=metastore -Dversion=6.1.0.1 -Dpackaging=jar-->
+		<dependency>
+			<groupId>com.pentaho</groupId>
+			<artifactId>kettle-core</artifactId>
+			<version>6.1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho</groupId>
+			<artifactId>kettle-engine</artifactId>
+			<version>6.1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pentaho</groupId>
+			<artifactId>metastore</artifactId>
+			<version>6.1.0.1</version>
+		</dependency>
+		<!--kettle包中使用到了guava以及commons-vfs2-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>18.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-vfs2</artifactId>
+			<version>2.1</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
