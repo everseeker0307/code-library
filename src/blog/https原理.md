@@ -1,7 +1,7 @@
 # https原理
 
 ## SSL协议握手过程
-![SSL协议握手过程](src/blog/static/SSL协议握手过程.png)
+![SSL协议握手过程](blob/master/src/blog/static/SSL%E5%8D%8F%E8%AE%AE%E6%8F%A1%E6%89%8B%E8%BF%87%E7%A8%8B.png)
 
 ## 如何保证安全  
 **密钥**  
